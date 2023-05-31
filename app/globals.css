@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+:root {
+  --trans-dark: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  padding: 1em;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: grid;
+  grid-gap: 1em;
+}
+.counter-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+.counter {
+  padding: 1em;
+  border: 1px solid var(--trans-dark);
+}
+
+.form-container {
+  padding: 1em;
+  border: 1px solid var(--trans-dark);
+}
+
+.form-details {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.user-info {
+  border: 1px solid var(--trans-dark);
+}
+
+.input-form {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.input-form > div {
+  display: flex;
+}
+
+.input-form > div > label + input {
+  margin-left: 1em;
+}
